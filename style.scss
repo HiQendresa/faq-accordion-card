@@ -1,0 +1,55 @@
+:root {
+
+    --clr-white: 0, 0%, 98%;
+    --clr-black: 239, 21%, 20%;
+    --clr-gray: 239, 10%, 57%;
+    --clr-light-green: 192, 37%, 48%;
+
+    --font-family: 'Red Hat Display', sans-serif;
+}
+
+*,
+*::before, 
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+ 
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  overflow-x: hidden;
+  max-width: 1440px;
+  position: relative;
+  background: linear-gradient(180deg, #B068E9 0%, #6463E7 100%);
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  width: 100%;
+  display: block;
+}
+
+
