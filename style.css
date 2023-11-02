@@ -61,7 +61,7 @@ main {
 }
 main .container {
   width: 327px;
-  height: 535px;
+  height: auto;
   margin: 40% auto;
   border-radius: 23px;
   background: #FFF;
@@ -100,20 +100,20 @@ main .container .content .faq-content {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 15% auto;
+  margin: 0% auto;
   gap: 15px;
 }
 main .container .content .faq-content .faq {
   width: 279px;
-  height: 45px;
+  height: auto;
+  border-bottom: 1px solid #E8E8EA;
 }
 main .container .content .faq-content .faq .question {
   width: 279px;
-  height: 45px;
   display: flex;
+  padding: 15px 0;
   justify-content: space-between;
   align-items: baseline;
-  border-bottom: 1px solid #E8E8EA;
 }
 main .container .content .faq-content .faq .question h3 {
   color: #4B4C5F;
@@ -135,4 +135,5 @@ main .container .content .faq-content .faq .answer {
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
+  margin: 15px 0;
 }/*# sourceMappingURL=style.css.map */
