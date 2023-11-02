@@ -1,12 +1,30 @@
-const btnsQuestion = document.querySelectorAll('.question');
-const answer = document.querySelector('.answer');
-const icon = document.querySelector('.question img');
+const faqs = document.querySelectorAll('.faq');
 
-btnsQuestion.forEach((btn) => {
+faqs.forEach((item) => {
+    const btn = item.querySelector('.question');
+    const answer = item.querySelector('.answer');
+    const icon = item.querySelector('.question img');
+    const question = item.querySelector('.question h3');
     
     btn.addEventListener('click', () => {
-        answer.style.display='block';
-        icon.style.transform = "rotate(180deg)";
-    });
+        faqs.forEach((faqItem) => {
+            const faqAnswer = faqItem.querySelector('.answer');
+            if (faqAnswer !== answer) {
+                faqAnswer.style.display = 'none';
+                icon.style.transform = "rotate(0deg)";
+                question.style.fontWeight = 'regular';
+            }
+        });
+      if (answer.style.display === 'none' || answer.style.display === '') {
+                answer.style.display = 'block';
+                icon.style.transform = "rotate(180deg)";
+                question.style.fontWeight = 'bold';
+            } else {
+                answer.style.display = 'none';
+                icon.style.transform = "rotate(0deg)";
+                question.style.fontWeight = 'regular';
+            }
+        });
 })
+
 
