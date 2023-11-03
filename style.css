@@ -1,11 +1,4 @@
 :root {
-  --very-dark-desaturated-blue: 238, 29%, 16%;
-  --soft-red: 14, 88%, 65%;
-  --soft-violet: 273, 75%, 66%;
-  --soft-blue: 240, 73%, 65%;
-  --ver-dark-grayish-blue: 237, 12%, 33%;
-  --dark-grayish-blue: 240, 6%, 50%;
-  --light-grayish-blue: 240, 5%, 91%;
   --font-family: "Kumbh Sans", sans-serif;
 }
 
@@ -58,6 +51,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 main .container {
   width: 327px;
@@ -72,23 +66,65 @@ main .container {
   padding-inline: 10px;
   position: relative;
 }
-main .container .image {
+@media screen and (min-width: 800px) {
+  main .container {
+    margin: 10% auto;
+    width: 920px;
+    height: 509px;
+    flex-direction: row;
+    overflow: hidden;
+  }
+}
+main .container .image-content {
+  max-width: 500px;
+  position: relative;
+}
+main .container .image-content .image {
   width: 237px;
   position: relative;
 }
-main .container .illustration-woman {
-  position: absolute;
-  top: -20%;
+@media screen and (min-width: 800px) {
+  main .container .image-content .image {
+    width: 437px;
+  }
 }
-main .container .bg-pattern {
-  margin-top: 0%;
+main .container .image-content .illustration-woman {
+  position: absolute;
+  top: -105%;
+}
+@media screen and (min-width: 800px) {
+  main .container .image-content .illustration-woman {
+    top: 28%;
+    left: -17%;
+  }
+}
+main .container .image-content .bg-pattern {
+  margin-top: -54%;
+}
+@media screen and (min-width: 800px) {
+  main .container .image-content .bg-pattern {
+    margin-top: -29%;
+    left: -113%;
+    width: 922px;
+  }
 }
 main .container .content {
-  margin-top: 30px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 800px) {
+  main .container .content {
+    margin: unset;
+    align-items: self-start;
+  }
 }
 main .container .content h3 {
   color: #1E1F36;
-  font-family: Kumbh Sans;
+  font-family: var(--font-family);
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
@@ -109,8 +145,12 @@ main .container .content .faq-content .faq {
   border-bottom: 1px solid #E8E8EA;
   cursor: pointer;
 }
+@media screen and (min-width: 800px) {
+  main .container .content .faq-content .faq {
+    width: 350px;
+  }
+}
 main .container .content .faq-content .faq .question {
-  width: 279px;
   display: flex;
   padding: 15px 0;
   justify-content: space-between;
@@ -118,11 +158,14 @@ main .container .content .faq-content .faq .question {
 }
 main .container .content .faq-content .faq .question h3 {
   color: #4B4C5F;
-  font-family: Kumbh Sans;
+  font-family: var(--font-family);
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+main .container .content .faq-content .faq .question h3:hover {
+  color: #F47B56;
 }
 main .container .content .faq-content .faq .question img {
   width: 8px;
@@ -131,11 +174,34 @@ main .container .content .faq-content .faq .question img {
 main .container .content .faq-content .faq .answer {
   display: none;
   color: #787887;
-  font-family: Kumbh Sans;
+  font-family: var(--font-family);
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
   margin: -4px 0 9px 0;
   transition: display 1s ease-out;
+}
+main .container .content .faq-content .active .answer {
+  display: block;
+}
+main .container .content .faq-content .active .question h3 {
+  font-weight: bold;
+}
+main .container .content .faq-content .active .question img {
+  transform: rotate(180deg);
+}
+main .box {
+  position: absolute;
+  width: 80px;
+  top: 14%;
+  z-index: 1;
+  left: 15%;
+}
+@media screen and (min-width: 800px) {
+  main .box {
+    top: 46%;
+    left: 11%;
+    width: 180px;
+  }
 }/*# sourceMappingURL=style.css.map */
